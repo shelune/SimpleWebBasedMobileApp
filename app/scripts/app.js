@@ -9,13 +9,14 @@
  * Main module of the application.
  */
 angular
-  .module('experimentalApp', [
+  .module('myTodoApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.sortable'
   ])
   .config(function ($routeProvider) {
     $routeProvider

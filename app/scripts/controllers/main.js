@@ -7,11 +7,14 @@
  * # MainCtrl
  * Controller of the experimentalApp
  */
-angular.module('experimentalApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+angular.module('myTodoApp')
+  .controller('MainCtrl', function ($scope) {
+    $scope.todos = [];
+    $scope.addTodo = function () {
+        $scope.todos.push($scope.todo);
+        $scope.todo = '';
+    };
+    $scope.removeTodo = function(index) {
+        $scope.todos.splice(index, 1);
+    }
   });
