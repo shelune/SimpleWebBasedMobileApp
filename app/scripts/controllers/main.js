@@ -16,5 +16,5 @@ angular.module('myTodoApp')
     };
     $scope.removeTodo = function(index) {
         $scope.todos.splice(index, 1);
-    }
+    };
   });

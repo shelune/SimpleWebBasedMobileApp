@@ -30,7 +30,14 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/pokemon', {
+        templateUrl: 'views/pokemon.html',
+        controller: 'PokemonCtrl',
+        controllerAs: 'pokemon'
+      })
       .otherwise({
         redirectTo: '/'
       });
   });
+
+  

@@ -1,0 +1,22 @@
+<div class="container" ng-controller="PokemonCtrl">
+    <h2>Pokemon Data?</h2>
+    <div class="pokemon-data">
+        <form ng-submit="pokemon.findPokemon(pokemon.pokemonNumber)" role="form">
+            <div class="row">
+                <div class="input-group">
+                    <input type="number" min="0" class="form-control" placeholder="Pokemon number" ng-model="pokemon.pokemonNumber">
+                    <span class="input-group-btn">
+                        <input type="submit" class="btn btn-primary" value="Find">
+                    </span>
+                </div>
+            </div>
+        </form>
+
+        <p>{{ pokemon.name }}</p>
+        <span>Pokemon No.: {{ pokemon.number }}</span>
+        <p>Abilities: <span ng-repeat="ability in pokemon.abilities track by $index">{{ ability }},</span></p>
+        <div class="sprite-holder">
+            <img alt="" ng-src="{{ pokemon.sprite }}">
+        </div>
+    </div>
+</div>
